@@ -1,0 +1,20 @@
+---
+export function getStaticPaths() {
+  return [
+    {params: {tag: "astro"}},
+    {params: {tag: "javascript"}},
+    {params: {tag: "php"}},
+  ]
+}
+
+const {tag} = Astro.params
+---
+
+
+<html>
+  <h1>タグ：{tag}</h1>
+  <ul>
+    <li>Astro</li>
+    <li>Js</li>
+  </ul>
+</html>
